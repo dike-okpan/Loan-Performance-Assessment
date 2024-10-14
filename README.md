@@ -123,6 +123,132 @@ Our bank has processed 38,576 loan applications to date, with $435.8 million in 
 |-------------------------|---------------------|-----------------------|
 | 38,576                  | $435,757,075        | $473,070,933          |
 
+### 2. Loan Health Breakdown
+
+**Good Loans Dominate:** About 86% of the loans we’ve issued are in good standing, meaning they’re either fully paid off or current on payments. These represent 33,243 loans and $370.2 million in funded loans, with $435.8 million already paid back to us.
+                                  
+| Total Loan Applications | Total Funded Amount | Total Amount Received |
+|-------------------------|---------------------|-----------------------|
+| 33,243                  | $370,224,850        | $435,786,170          |
+                                
+**Bad Loans Remain Low:** Only 13% of our loans, or 5,333 loans, are considered bad (charged off, meaning they won’t be paid back). These loans totaled $65.5 million in funding, but we’ve recovered $37.3 million from them so far.
+
+| Total Loan Applications | Total Funded Amount | Total Amount Received |
+|-------------------------|---------------------|-----------------------|
+| 5,333                   | $65,532,225         | $37,284,763           |
+
+
+### 3. Issued Loan: What Happened to the Loans We Issued?
+
+**Fully Paid Loans:** A total of 32,145 loans have been fully repaid, with customers paying back $411.6 million from the $351.4 million we initially funded. These loans had an average interest rate of 11.64%, which is lower than other loans.
+
+**Charged Off Loans:** Unfortunately, 5,333 loans have been charged off, meaning we likely won’t recover the remaining balance. These loans had a higher interest rate of 13.88%, and customers have repaid $37.3 million of the $65.5 million we funded.
+
+**Current Loans**: Right now, 1,098 loans are still being paid on time. These customers have already repaid $24.2 million of the $18.9 million we initially funded, with a higher interest rate of 15.01% on these loans.
+
+| Loan Status | Total Loan Applications | Total Funded Amount | Total Amount Received | Interest Rate | DTI    |
+|-------------|-------------------------|---------------------|-----------------------|---------------|--------|
+| Fully Paid  | 32,145                  | $351,358,350        | $411,586,256          |   11.64%      | 13.17% |
+| Charged Off | 5,333                   | $65,532,225         | $37,284,763           |   13.88%      | 14%    |
+| Current     | 1,098                   | $18,866,500         | $24,199,914           |   15.01%      | 14.72% |
+
+### 4. Monthly Performance Throughout the Year
+
+Growth has been steady throughout the year, with standout months like October, where we received $49.4 million, and August, which brought in $42.7 million.
+
+| Month      | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|------------|-------------------------|---------------------|-----------------------|
+| January    | 2,332                   | $25,031,650         | $27,578,836           |
+| Febuary    | 2,279                   | $24,647,825         | $27,717,745           | 
+| March      | 2,627                   | $28,875,700         | $32,264,400           |
+| April      | 2,755                   | $29,800,800         | $32,495,533           |
+| May        | 2,911                   | $31,738,350         | $33,750,523           |
+| June       | 3,184                   | $34,161,475         | $36,164,533           |
+| July       | 3,366                   | $35,813,900         | $38,827,220           |
+| August     | 3,441                   | $38,149,600         | $42,682,218           |
+| September  | 3,536                   | $40,907,725         | $43,983,948           | 
+| October    | 3,796                   | $44,893,800         | $49,399,567           |  
+| November   | 4,035                   | $47,754,825         | $50,132,030           |
+| December   | 4,314                   | $53,981,425         | $58,074,380           |
+
+How We Performed This Month?
+
+- December So Far: We’ve already processed 4,314 new applications, funding $54 million in loans, and collecting $58.1 million in payments this month alone.
+- Compared to November: We saw a slight increase, as November’s numbers were 4,035 new applications, with $47.8 million in loans funded.
+
+This steady upward trend signals increased demand , especially as we approach year-end. Seasonality could play a role here, as people may be seeking loans for holidays or large purchases. It will be important to monitor whether this demand continues into the new year or if we should expect a downturn.
+
+### 5. Loan Purposes: What Customers Are Borrowing For?
+
+Our most popular loan purpose is debt consolidation, which allows people to combine their debts into one loan. This makes up nearly half of our loan applications and bringing in $232.7 million in repayments. Other significant purposes include credit card debt refinancing, home improvement, and major purchases, all contributing millions to our overall performance.
+
+However, we are also seeing some bad loans, especially in areas like debt consolidation, where 2,651 loans have defaulted, also small business loans, where 455 loans are no longer being repaid.
+
+**- Top 5 Good Loan**
+
+| Purpose            | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|--------------------|-------------------------|---------------------|-----------------------|
+| Debt Consolidation | 15,563                  | $196,201,775        | $232,740,930          |
+| Credit card        | 4,490                   | $52,192,725         | $61,163,976           | 
+| Other              | 3,237                   | $26,178,925         | $30,603,991           |
+| Home Improvement   | 2,549                   | $29,404,050         | $34,288,687           |
+| Major Purchase     | 1,904                   | $15,337,075         | $17,632,626           |
+
+**- Top 5 Bad Loan**
+
+| Purpose            | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|--------------------|-------------------------|---------------------|-----------------------|
+| Debt Consolidation | 2,651                   | $36,257,900         | $21,060,941           |
+| Other              | 587                     | $4,976,825          | $2,685,685            | 
+| Credit card        | 508                     | $6,692,450          | $4,050,108            |
+| Small Business     | 455                     | $6,668,975          | $3,360,238            |
+| Home Improvement   | 327                     | $3,946,725          | $2,092,243            |
+
+### 6. Loan Terms & Repayment
+
+When it comes to loan terms, most of our good loans are 36-month terms (3 years), which account for 25,214 loans and $278.1 million in repayments. These shorter-term loans are performing well, as they offer lower risk for both the borrower and the bank.
+
+On the other hand, 60-month loans (5 years) are more common among bad loans. 2,310 bad loans were on this longer term, resulting in $36.6 million funded but less than expected repayments. This suggests that longer-term loans may carry higher risk, and we may want to focus on promoting shorter-term loans to maintain healthier cash flow.
+
+**- Good Loan**
+
+| Term               | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|--------------------|-------------------------|---------------------|-----------------------|
+| 36 months          | 25,214                  | $244,132,700        | $278,129,288          |
+| 60 months          | 8,029                   | $126,092,150        | $157,656,882          | 
+
+**- Bad Loan**
+
+| Term               | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|--------------------|-------------------------|---------------------|-----------------------|
+| 36 months          | 3,023                   | $28,908,525         | $16,580,170           |
+| 60 months          | 2,310                   | $36,623,700         | $20,704,593           |
+
+
+### 7. Home Ownership Trends
+
+Home ownership status is another critical factor in understanding loan performance.  We noticed that renters make up the largest group of good loans, with 15,752 applications and $185.3 million received, but they also account for 2,687 bad loans, which defaulted on $29 million.
+Borrowers with mortgages show slightly more stability, representing 14,967 good loans and contributing $220.4 million in repayments. 
+
+As expected, homeowners tend to have better financial health, but renters make up a larger portion of our customer base.
+
+**- Good Loan**
+
+| Home Ownership     | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|--------------------|-------------------------|---------------------|-----------------------|
+| Rent               | 2,651                   | $36,257,900         | $21,060,941           |
+| Mortgage           | 587                     | $4,976,825          | $2,685,685            | 
+| Own                | 508                     | $6,692,450          | $4,050,108            |
+| Other              | 455                     | $6,668,975          | $3,360,238            |
+| None               | 327                     | $3,946,725          | $2,092,243            |
+
+
+
+
+### 8. States with Lowest Loan Applications
+
+
+
 
 
 
