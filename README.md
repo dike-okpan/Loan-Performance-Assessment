@@ -236,16 +236,53 @@ As expected, homeowners tend to have better financial health, but renters make u
 
 | Home Ownership     | Total Loan Applications | Total Funded Amount | Total Amount Received |
 |--------------------|-------------------------|---------------------|-----------------------|
-| Rent               | 2,651                   | $36,257,900         | $21,060,941           |
-| Mortgage           | 587                     | $4,976,825          | $2,685,685            | 
-| Own                | 508                     | $6,692,450          | $4,050,108            |
-| Other              | 455                     | $6,668,975          | $3,360,238            |
-| None               | 327                     | $3,946,725          | $2,092,243            |
+| Rent               | 15,752                  | $156,777,775        | $185,261,281          |
+| Mortgage           | 14,967                  | $187,581,025        | $220,409,767          | 
+| Own                | 2,441                   | $25,051,725         | $29,209,159           |
+| Other              | 80                      | $797,525            | $886,910              |
+| None               | 3                       | $16,800             | $19,053               |
+
+**- Bad Loan**
+
+| Home Ownership     | Total Loan Applications | Total Funded Amount | Total Amount Received |
+|--------------------|-------------------------|---------------------|-----------------------|
+| Rent               | 2,687                   | $28,990,700         | $16,561,775           |
+| Mortgage           | 2,231                   | $31,748,125         | $18,064,671           | 
+| Own                | 397                     | $4,545,950          | $2,519,970            |
+| Other              | 18                      | $247,450            | $138,347              |
 
 
+### 8. Bottom 10 States with Lowest Loan Applications
 
+Interestingly, there are states where we’ve had very few applications, such as Maine, which saw only 3 applications, and Nebraska and Iowa, each with only 5 applications. This highlights potential opportunities for future growth or marketing efforts in these regions.
 
-### 8. States with Lowest Loan Applications
+| States         | Total Loan Applications |
+|----------------|-------------------------|
+| Maine          | 3                       |
+| Nebraska       | 5                       | 
+| Iowa           | 5                       |
+| Idaho          | 6                       |
+| Indiana        | 9                       |
+| Tennessee      | 17                      |
+| Mississippi    | 19                      |
+| Vermount       | 54                      |
+| South Dakota   | 63                      |
+| Alaska         | 78                      |
+
+## Insights Deep Dive
+### Risk Management: Let's focus on Bad Loans
+
+As mentioned, bad loans currently make up 13% of our portfolio, with some categories posing more risk than others. The small business and other loan categories have a relatively high percentage of defaults. For example, out of 455 small business loans, $6.7 million was funded, but we’ve only recovered $3.4 million. This highlights the challenge of lending to small businesses, which may face more volatile financial circumstances.
+
+Additionally, charged-off loans tend to have higher debt-to-income (DTI) ratios and interest rates. The average interest rate for charged-off loans is 13.88%, compared to 11.64% for fully paid loans. Higher DTI ratios (an average of 14%) suggest that these borrowers are more financially stretched, which could be a warning signal for future defaults.
+
+Our current loans, which are still being repaid on time, show an even higher interest rate of 15.01%. These could either turn into future bad loans, or they could be higher-yielding successes if repayments continue on schedule. Monitoring the performance of these loans will be crucial in determining how aggressive or conservative we should be in future lending.
+
+### Geographic Opportunities: States with Low Loan Applications
+
+Interestingly, there are several states where we’ve seen very few loan applications. Maine, for instance, has only processed 3 applications this year, while Nebraska and Iowa each had just 5 applications. These states represent untapped markets where targeted marketing efforts could potentially drive new growth.
+
+States with low loan applications might offer an opportunity to expand our reach, especially as we’ve seen steady growth in other regions. However, we should also consider whether these states have different economic conditions that make residents less likely to take out loans.
 
 
 
