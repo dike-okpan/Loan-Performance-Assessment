@@ -607,6 +607,37 @@ order by 2
 
 ```
 
+## POWER BI DAX
+
+### DATE TABLE
+
+```sql
+
+-- calender table
+Date_table = CALENDAR(MIN(bank_loan_data[issue_date]),MAX(bank_loan_data[issue_date]))
+
+-- Month
+Month = FORMAT(Date_table[Date],"mmm") 
+
+-- Month Number
+Month Number = MONTH(Date_table[Date])
+
+```
+
+### KPIs
+
+```sql
+
+
+
+
+
+```
+
+
+
+
+
 
 
 
