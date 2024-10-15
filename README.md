@@ -274,19 +274,338 @@ Interestingly, there are states where we’ve had very few applications, such as
 
 As mentioned, bad loans currently make up 13% of our portfolio, with some categories posing more risk than others. The small business and other loan categories have a relatively high percentage of defaults. For example, out of 455 small business loans, $6.7 million was funded, but we’ve only recovered $3.4 million. This highlights the challenge of lending to small businesses, which may face more volatile financial circumstances.
 
-Additionally, charged-off loans tend to have higher debt-to-income (DTI) ratios and interest rates. The average interest rate for charged-off loans is 13.88%, compared to 11.64% for fully paid loans. Higher DTI ratios (an average of 14%) suggest that these borrowers are more financially stretched, which could be a warning signal for future defaults.
+Additionally, bad loans tend to have higher debt-to-income (DTI) ratios and interest rates. The average interest rate for charged-off loans is 13.88%, compared to 11.64% for fully paid loans. Higher DTI ratios (an average of 14%) suggest that these borrowers are more financially stretched, which could be a warning signal for future defaults.
 
 Our current loans, which are still being repaid on time, show an even higher interest rate of 15.01%. These could either turn into future bad loans, or they could be higher-yielding successes if repayments continue on schedule. Monitoring the performance of these loans will be crucial in determining how aggressive or conservative we should be in future lending.
 
 ### Geographic Opportunities: States with Low Loan Applications
 
-Interestingly, there are several states where we’ve seen very few loan applications. Maine, for instance, has only processed 3 applications this year, while Nebraska and Iowa each had just 5 applications. These states represent untapped markets where targeted marketing efforts could potentially drive new growth.
+There are several states where we’ve seen very few loan applications. Maine, for instance, has only processed 3 applications this year, while Nebraska and Iowa each had just 5 applications. These states represent untapped markets where targeted marketing efforts could potentially drive new growth.
 
 States with low loan applications might offer an opportunity to expand our reach, especially as we’ve seen steady growth in other regions. However, we should also consider whether these states have different economic conditions that make residents less likely to take out loans.
 
+# Recommendations
+
+- Do Interest Rates Need to Change?
+
+**No Major Changes Required:** The current loan portfolio is healthy, with most loans being repaid.Right now, the bank’s average interest rate sits at 12.05%, with minor month-to-month changes (12.36% this month vs. 11.94% last month). Most loans (86%) are performing well, meaning there’s no immediate need to raise interest rates across the board, which is good news for both the bank and its customers.
+
+**Targeted Rate Adjustments for Riskier Borrowers and Loan Purposes:** Even though a general interest rate increase isn’t necessary, moreover, a targeted rate adjustment should be considered. For risky borrowers with higher DTI or loan purposes (like debt consolidation or small businesses) that might not be paid back easily, the bank can consider small rate increases. This way, the bank is protected from loses, and everyone else’s rate stays the same.
+
+Additionally, target specific loan Purposes for caution for certain loan purposes, like those for debt consolidation or small businesses, have a higher percentage of defaults. This is an opportunity to adjust how we assess these borrowers and also focus on helping them succeed, such as offering financial advice or creating more tailored loan options.
 
 
+- How can we improve the Low-Application States?
 
+**Launch Targeted Campaigns:** In states like Maine, where only 3 loan applications have been made, and other states like Nebraska, Iowa, and Idaho with also very low loan application numbers, a targeted marketing campaign could draw in new customers. Offering special loan deals or slightly lower interest rates in these regions might encourage more people to apply.
+
+**Attract Borrowers with Competitive Rates:** In these underperforming states, we can offer competitive interest rates to attract new business without taking on significant risk. Lower rates for first-time borrowers or specific loan types might encourage people to see the bank as their go-to option in these states.
+
+### Action Plan
+
+- Now, what steps do we take to implement the recommended decisions effectively?
+
+1. Maintain current interest rates.
+2. Implement targeted rate adjustments.
+3. Offer financial advice for risky loan purposes.
+4. Develop targeted marketing campaigns.
+5. Introduce competitive Loan offers.
+6. Monitor and evaluate performance. 
+
+# Queries
+
+## SQL Queries
+
+### DATA PREPARATION
+
+```sql
+select *
+from bank_loan_data
+
+create view view_bank_loan as
+select id,
+	address_state,
+	home_ownership,
+	issue_date,
+	loan_status,
+	purpose,
+	term,
+	dti,
+	int_rate,
+	loan_amount,
+	total_payment
+from bank_loan_data
+
+select *
+from view_bank_loan
+
+```
+
+### DATA TESTING AND QUALITY CHECKS
+
+```sql
+--- Row count test
+select count(*) as Total_Rows
+from view_bank_loan
+
+--- Column count test
+select count(*) as Total_Columns
+from INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME = 'view_bank_loan'
+
+--- Data type check
+select COLUMN_NAME,
+	   DATA_TYPE
+from INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME = 'view_bank_loan'
+
+--- Duplicates check
+select id,
+	count(*) as Duplicates
+from view_bank_loan
+group by id
+having count(*) > 1
+
+```
+
+### KPIs
+
+```sql
+
+-- TOTAL LOAN APPLICATION
+select COUNT(id) as Total_loan_application
+from view_bank_loan
+
+--Month-to-date
+select COUNT(id) as MTD_Total_loan_application
+from view_bank_loan
+where MONTH(issue_date)=12 and YEAR(issue_date)=2021
+
+--previous month-to-date
+select COUNT(id) as PMTD_Total_loan_application
+from view_bank_loan
+where MONTH(issue_date)=11 and YEAR(issue_date)=2021
+
+-- TOTAL FUNDED AMOUNT
+select sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+
+--month-to-date
+select sum(loan_amount) as MTD_Total_Funded_Amount
+from view_bank_loan
+where MONTH(issue_date)=12 and YEAR(issue_date)=2021
+
+--previous month-to-date
+select sum(loan_amount) as PMTD_Total_Funded_Amount
+from view_bank_loan
+where MONTH(issue_date)=11 and YEAR(issue_date)=2021
+
+--TOTAL AMOUNT RECEIVED
+select sum(total_payment) as Total_Amount_Received
+from view_bank_loan
+
+--month-to-date
+select sum(total_payment) as MTD_Total_Amount_Received
+from view_bank_loan
+where MONTH(issue_date)=12 and YEAR(issue_date)=2021
+
+--previous month-to-date
+select sum(total_payment) as PMTD_Total_Amount_Received
+from view_bank_loan
+where month(issue_date)=11 and YEAR(issue_date)=2021
+
+--AVERAGE INTEREST RATE
+select round(AVG(int_rate),4) * 100 as Avg_Interest_Rate
+from view_bank_loan
+
+--month-to-date
+select round(AVG(int_rate),4) * 100 as MTD_Avg_Interest_Rate
+from view_bank_loan
+where MONTH(issue_date)=12 and YEAR(issue_date)=2021
+
+--previous month-to-month
+select round(AVG(int_rate),4) * 100 as PMTD_Avg_Interest_Rate
+from view_bank_loan
+where MONTH(issue_date)=11 and YEAR(issue_date)=2021
+
+
+--AVERAGE DTI
+select round(AVG(dti),4) * 100 as Avg_DTI
+from view_bank_loan
+
+--month-to-date
+select round(AVG(dti),4) * 100 as MTD_Avg_DTI
+from view_bank_loan
+where MONTH(issue_date)=12 and YEAR(issue_date)=2021
+
+--previuos month-to-date
+select round(AVG(dti),4) * 100 as PMTD_Avg_DTI
+from view_bank_loan
+where MONTH(issue_date)=11 and YEAR(issue_date)=2021
+
+```
+
+### GOOD LOAN
+
+```sql
+
+--GOOD LOAN PERCENTAGE
+select 
+	COUNT(case when loan_status = 'Fully Paid' or loan_status = 'Current' then id End)*100
+	/
+	COUNT(id) as Good_Loan_Percentage
+from view_bank_loan
+
+--GOOD LOAN APPLICTIONS
+select COUNT(id) as Good_Loan_Applications
+from view_bank_loan
+where loan_status = 'Fully Paid' or loan_status = 'Current'
+
+--GOOD LOAN FUNDED AMOUNT
+select sum(loan_amount) as Good_Loan_Funded_Amount
+from view_bank_loan
+where loan_status = 'Fully Paid' or loan_status = 'Current'
+
+--GOOD LOAN RECEIVED AMOUNT
+select sum(total_payment) as Good_Loan_Received_Amount
+from view_bank_loan
+where loan_status = 'Fully Paid' or loan_status = 'Current'
+
+```
+
+### BAD LOAN
+
+```sql
+
+--BAD LOAN PERCENTAGE
+select 
+	COUNT(case when loan_status = 'Charged Off' then id End)*100
+	/
+	COUNT(id) as Bad_Loan_Percentage
+from view_bank_loan
+
+--BAD LOAN APPLICATIONS
+select COUNT(id) as Bad_Loan_Applications
+from view_bank_loan
+where loan_status = 'Charged Off'
+
+--BAD LOAN FUNDED AMOUNT
+select sum(loan_amount) as Bad_Loan_Funded_Amount
+from view_bank_loan
+where loan_status = 'Charged Off'
+
+--BAD LOAN RECEIVED AMOUNT
+select sum(total_payment) as Bad_Loan_Received_Amount
+from view_bank_loan
+where loan_status = 'Charged Off'
+
+```
+
+### LOAN STATUS
+
+```sql
+
+select loan_status,
+	 count(id) as Total_Loan_Applications,
+	 sum(total_payment) as Total_Amount_Received,
+	 sum(loan_amount) as Total_Funded_Amount,
+	 avg(int_rate)*100 as Interest_Rate,
+	 avg(dti)*100 as DTI
+from view_bank_loan
+group by loan_status
+
+```
+
+### LOAN PURPOSE ANALYSIS
+
+```sql
+
+--good loan
+select Top 5 
+	purpose,
+	count(id) as Total_Loan_Applications,
+	sum(total_payment) as Total_Amount_Received,
+	sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+where loan_status = 'Fully Paid' or loan_status = 'Current'
+group by purpose
+order by Total_Loan_Applications desc
+
+--bad loan
+select top 5
+	purpose,
+	count(id) as Total_Loan_Applications,
+	sum(total_payment) as Total_Amount_Received,
+	sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+where loan_status = 'Charged Off'
+group by purpose
+order by Total_Loan_Applications desc
+
+```
+
+### LOAN TERM ANALYSIS
+
+```sql
+
+--good loan
+select term,
+	count(id) as Total_Loan_Applications,
+	sum(total_payment) as Total_Amount_Received,
+	sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+where loan_status = 'Fully Paid' or loan_status = 'Current'
+group by term
+
+--bad loan
+select term,
+	count(id) as Total_Loan_Applications,
+	sum(total_payment) as Total_Amount_Received,
+	sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+where loan_status = 'Charged Off'
+group by term
+
+```
+
+### HOME OWNERSHIP ANALYSIS
+
+```sql
+
+--good loan
+select home_ownership,
+	count(id) as Total_Loan_Applications,
+	sum(total_payment) as Total_Amount_Received,
+	sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+where loan_status = 'Fully Paid' or loan_status = 'Current'
+group by home_ownership
+order by Total_Loan_Applications desc
+
+--bad loan
+select home_ownership,
+	count(id) as Total_Loan_Applications,
+	sum(total_payment) as Total_Amount_Received,
+	sum(loan_amount) as Total_Funded_Amount
+from view_bank_loan
+where loan_status = 'Charged Off'
+group by home_ownership
+order by Total_Loan_Applications desc
+
+```
+
+### REGIONAL ANALYSIS BY STATE WITH LOWEST APPLICATIONS
+
+```sql
+
+select Top 10 
+	address_state as States,
+	count(id) as Total_Loan_Applications
+from view_bank_loan
+group by address_state
+order by 2
+
+```
 
 
 
