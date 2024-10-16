@@ -710,7 +710,7 @@ MoM Avg DTI = ([MTD Avg DTI]-[PMTD Avg DTI])/[PMTD Avg DTI]
 
 ```
 
-### Good Loan
+### GOOD LOAN
 
 ```sql
 /* 
@@ -734,7 +734,7 @@ Good Loan Total Amount Received = CALCULATE([Total Amount Received], bank_loan_d
 
 ```
 
-### Bad Loan
+### BAD LOAN
 
 ```sql
 /* 
