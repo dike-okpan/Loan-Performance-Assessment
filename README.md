@@ -626,13 +626,163 @@ Month Number = MONTH(Date_table[Date])
 
 ### KPIs
 
+#### Total Loan Applications
+
 ```sql
 
+-- Total Loan Applications
+Total Loan Applications = COUNT(bank_loan_data[id])
 
+-- PMTD Total Loan Applications
+PMTD Total Amount Received = CALCULATE([Total Amount Received], DATESMTD(DATEADD(Date_table[Date],-1,MONTH)))
 
-
+-- MTD Total Loan Applications
+MTD Loan Applications = CALCULATE(TOTALMTD([Total Loan Applications],Date_table[Date]))
 
 ```
+
+#### Total Funded Amount
+
+```sql
+
+-- Total Funded Amount
+Total Funded Amount = SUM(bank_loan_data[loan_amount])
+
+-- PMTD Total Funded Amount
+PMTD Funded Amount = CALCULATE([Total Funded Amount], DATESMTD(DATEADD(Date_table[Date],-1,MONTH)))
+
+-- MTD Total Funded Amount
+MTD Funded Amount = CALCULATE(TOTALMTD([Total Funded Amount],Date_table[Date]))
+
+-- MoM Total Funded Amount
+MoM Funded Amount = ([MTD Funded Amount]-[PMTD Funded Amount])/[PMTD Funded Amount]
+
+```
+
+#### Total Amount Received
+
+```sql
+
+-- Total Amount Received
+Total Amount Received = SUM(bank_loan_data[total_payment])
+
+-- PMTD Total Amount Received
+PMTD Total Amount Received = CALCULATE([Total Amount Received], DATESMTD(DATEADD(Date_table[Date],-1,MONTH)))
+
+-- MTD Total Amount Received
+MTD Total Amount Received = CALCULATE(TOTALMTD([Total Amount Received],Date_table[Date]))
+
+```
+
+#### Average Interest Rate
+
+```sql
+
+-- Average Interest Rate
+Avg Interest Rate = AVERAGE(bank_loan_data[int_rate])
+
+-- PMTD Average Interest Rate
+PMTD Avg int Rate = CALCULATE([Avg Interest Rate], DATESMTD(DATEADD(Date_table[Date],-1,MONTH)))
+
+-- MTD Average Interest Rate
+MTD Avg int Rate = CALCULATE(TOTALMTD([Avg Interest Rate],Date_table[Date]))
+
+-- MoM Average Interest Rate
+MoM Avg int Rate = ([MTD Avg int Rate]-[PMTD Avg int Rate])/[PMTD Avg int Rate]
+
+```
+
+#### Average DTI
+
+```sql
+
+-- Average DTI
+Avg DTI = AVERAGE(bank_loan_data[dti])
+
+-- PMTD Average DTI
+PMTD Avg DTI = CALCULATE([Avg DTI], DATESMTD(DATEADD(Date_table[Date],-1,MONTH)))
+
+-- MTD Average DTI
+MTD Avg DTI = CALCULATE(TOTALMTD([Avg DTI],Date_table[Date]))
+
+-- MoM Average DTI
+MoM Avg DTI = ([MTD Avg DTI]-[PMTD Avg DTI])/[PMTD Avg DTI]
+
+```
+
+### Good Loan
+
+```sql
+/* 
+
+Good Loan - Fully Paid, Current
+Bad Loan - Charged Off
+
+/*
+
+-- Good Loan %
+Good Loan% = (CALCULATE([Total Loan Applications], bank_loan_data[Good Loan vs Bad Loan] = "Good loan")) / [Total Loan Applications]
+
+-- Good Loan Total Loan Applications
+Good Loan Total Applications = CALCULATE([Total Loan Applications], bank_loan_data[Good Loan vs Bad Loan] = "Good Loan")
+
+-- Good Loan Total Funded Amount
+Good Loan Total Funded Amount = CALCULATE([Total Funded Amount], bank_loan_data[Good Loan vs Bad Loan] = "Good Loan")
+
+-- Good Loan Total Amount Received
+Good Loan Total Amount Received = CALCULATE([Total Amount Received], bank_loan_data[Good Loan vs Bad Loan] = "Good Loan")
+
+```
+
+### Bad Loan
+
+```sql
+/* 
+
+Good Loan - Fully Paid, Current
+Bad Loan - Charged Off
+
+/*
+
+-- Bad Loan %
+Bad Loan% = (CALCULATE([Total Loan Applications], bank_loan_data[Good Loan vs Bad Loan] = "Bad loan")) / [Total Loan Applications]
+
+-- Bad Loan Total Loan Applications
+Bad Loan Total Applications = CALCULATE([Total Loan Applications], bank_loan_data[Good Loan vs Bad Loan] = "Bad Loan")
+
+-- Bad Loan Total Funded Amount
+Bad Loan Total Funded Amount = CALCULATE([Total Funded Amount], bank_loan_data[Good Loan vs Bad Loan] = "Bad Loan")
+
+-- Bad Loan Total Amount Received
+Bad Loan Total Amount Received = CALCULATE([Total Amount Received], bank_loan_data[Good Loan vs Bad Loan] = "Bad Loan")
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
