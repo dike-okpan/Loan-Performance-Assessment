@@ -1,5 +1,26 @@
 # BANK LOAN PERFORMANCE: Evaluating Interest Rates and Market Expansion
 
+# Table of contents 
+
+- [Objective](#objective)
+	- [User story](user-story)
+- [Data source](#data-source)
+	- [Tools](#tools)
+- [Data Cleaning, Structure and Testing](#data-cleaning-structure-and-testing)
+- [Executive Summary](#executive-summary)
+	- [Overview of Findings](#overview-of-findings)
+- [Analysis](#analysis)
+	- [Findings](#findings)
+	- [Insights Deep Dive](#insights-deep-dive)
+- [Recommendations](#recommendations)
+	- [Action Plan](#action-plan)
+	- [Further Analysis](#further-analysis)
+- [Limitations](#limitations) 
+- [Queries](#queries)
+	- [SQL Queries](#sql-queries)
+	- [Power BI DAX](#power-bi-dax)           
+   
+ 
 # Objective
 
 To analyze the bank's loan portfolio, assess the performance of good and bad loans to inform interest rate decisions, and identify the ten states with the lowest loan applications. This project will deliver actionable recommendations for effective loan management.
@@ -52,6 +73,8 @@ Bank Loan Data for 2021: The primary dataset used for this analysis is the "fina
 | SQL Server | Cleaning, testing, and analyzing the data |
 | Power BI | Visualizing the data via interactive dashboards |
 | GitHub | Hosting the project documentation and version control |
+
+# Data Cleaning, Structure and Testing
 
 The data met the following criteria and constraints after cleaning:
 
@@ -310,7 +333,14 @@ Additionally, target specific loan Purposes for caution for certain loan purpose
 3. Offer financial advice for risky loan purposes.
 4. Develop targeted marketing campaigns.
 5. Introduce competitive Loan offers.
-6. Monitor and evaluate performance. 
+6. Monitor and evaluate performance.
+
+### Further Analysis
+
+Further analysis is required to fully understand the reasons for low loan application numbers in the identified states. This could be due to government lending policies that reduce the need for traditional loans; or if borrowers prefer our competitors. 
+If it’s a case of our competitors outperforming us, then it will be important to find out what they’re offering that we are not. This can help us improve in the low application states.
+
+# Limitations
 
 # Queries
 
@@ -607,7 +637,7 @@ order by 2
 
 ```
 
-## POWER BI DAX
+## Power BI DAX
 
 ### DATE TABLE
 
