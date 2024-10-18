@@ -342,6 +342,10 @@ If it’s a case of our competitors outperforming us, then it will be important 
 
 # Limitations
 
+**State Names in Abbreviations**
+
+The dataset listed state names in abbreviated form, which made it challenging to identify the states while analyzing the top 10 states with the lowest application numbers. However, during the documentation of this project, I referred to Wikipedia to identify the full name of the states.
+
 # Queries
 
 ## SQL Queries
