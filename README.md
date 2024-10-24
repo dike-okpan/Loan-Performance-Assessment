@@ -119,6 +119,12 @@ Data Cleaning Steps:
 
 The analysis suggests no need for broad interest rate increase. Instead, interest rates can be adjusted for high-risk borrowers and loan purposes. Also, targeted campaigns or lower rates can attract customers in low-application states. This approach will keep the loan portfolio healthy without discouraging good borrowers.
 
+![dashboard](https://github.com/dike-okpan/Bank-Loan-Performance/blob/baa10358a73305b0a5d29b61588f9ae56ac61d5e/bank_dash_1.jpg)
+
+![dashboard](https://github.com/dike-okpan/Bank-Loan-Performance/blob/baa10358a73305b0a5d29b61588f9ae56ac61d5e/bank_dash_2.jpg)
+
+![dashboard](https://github.com/dike-okpan/Bank-Loan-Performance/blob/baa10358a73305b0a5d29b61588f9ae56ac61d5e/bank_dash_3.jpg)
+
 # Analysis 
 
 ## Findings
